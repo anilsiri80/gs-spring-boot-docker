@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: anilsirigsspringbootdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: anilsirigsspringbootdocker 
+    spec:
+      containers:
+        - name: anilsirigsspringbootdocker 
+          image: anilsiri80registry.azurecr.io/anilsirigsspringbootdocker
+          ports:
+          - containerPort: 80
